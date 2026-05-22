@@ -17,6 +17,6 @@ while True:
         result = "Invalid operaotor"
     print("The result is: ", result)
 
-    again = input("Calclualte again? (y/n): ").lower
+    again = input("Calclualte again? (y/n): ").lower()
     if again != "y":
         break
