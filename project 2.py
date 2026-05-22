@@ -8,7 +8,10 @@ elif operator == "-":
 elif operator == "*":
     result = num1 * num2
 elif operator == "/":
-    resutl = num1 / num2
+    if num2 == 0:
+        result = "Error: Cannot divide by zero."
+    else:
+        result = num1 / num2
 else:
     result = "Invalid operaotor"
 print("The result is: ", result)
