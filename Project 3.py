@@ -6,7 +6,7 @@ def c_to_k(c):
     return c + 273.15
 def k_to_c (k):
     return k - 273.15
-def convert ():
+def convert():
     while True:
         scale = input("Choose scale (C)elsius, (F)arenheit, "
                     "(k)elvin: ").upper()
