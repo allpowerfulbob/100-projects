@@ -7,11 +7,25 @@ rates = {
     ("GBP", "EUR"): 1.15
     }
 print ("Simple Currency Converter")
-from_curr = input ("From (USD/EUR/GBP): ").upper()
-to_curr = input("To (USD/EUR/GBP): ").upper()
-amount = float(input("Amount: "))
-if (from_curr, to_curr) in rates:
-    result = amount * rates[(from_curr, to_curr)]
-    print("Converted amount: ", result)
-else:
-    print("Conversion not supported.")
+def convert_currency(frm, to, value):
+    if (frm, to) in rates:
+        return value * rates[frm, to]
+    else:
+        return None
+def run_converter():
+    while True:
+        frm = input("Convert from (USD/EUR/GBP): ").upper()
+        to = input("Convert to (USD/EUR/GBP): ").upper()
+        try:
+            amount = float(input("Enter amount: "))
+        except ValueError:
+            print("Error: amount must be a number.")
+            continue
+        result = convert_currency(frm, to, amount)
+        if result is None:
+            print("Conversion not available.")
+        else:
+            print("Result: ", result)
+        again = input("Would you like another conversion? (y/n): ").lower()
+        if again !="y":
+            break
