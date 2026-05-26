@@ -9,7 +9,7 @@ rates = {
 print ("Simple Currency Converter")
 from_curr = input ("From (USD/EUR/GBP): ").upper()
 to_curr = input("To (USD/EUR/GBP): ").upper()
-amount = flota(input("Amount: "))
+amount = float(input("Amount: "))
 if (from_curr, to_curr) in rates:
     result = amount * rates[(from_curr, to_curr)]
     print("Converted amount: ", result)
