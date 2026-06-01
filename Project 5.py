@@ -7,7 +7,6 @@ while guess != number_to_guess:
         guess = int(input("Enter your guess(1-10):"))
     except ValueError:
         print("Please enter a valid number.")
-    print("You finished the while statement.")
     continue
 if guess < number_to_guess:
     print("Too low! Try again.")
