@@ -4,7 +4,7 @@ number_to_guess = random.randint(1,10)
 guess = None
 while guess != number_to_guess:
     try:
-        guess = int(input("Enter your guess(1-100):"))
+        guess = int(input("Enter your guess(1-10):"))
     except ValueError:
         print("Please enter a valid number.")
     continue
