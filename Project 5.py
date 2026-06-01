@@ -8,7 +8,7 @@ while guess != number_to_guess:
     except ValueError:
         print("Please enter a valid number.")
     continue
-print("You made it here.")
+print("You made it to low number.")
 if guess < number_to_guess:
     print("Too low! Try again.")
 elif guess > number_to_guess:
