@@ -1,7 +1,7 @@
 import random
 print("Welcome to the number guessing game")
 number_to_guess = random.randint(1,10)
-guess = 0
+guess = None
 while guess != number_to_guess:
     try:
         guess = int(input("Enter your guess(1-100):"))
